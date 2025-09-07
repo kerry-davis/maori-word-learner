@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import type { Word } from '../types/index';
 import { useProgressContext } from '../contexts/ProgressContext';
-import { SoundIcon, CheckIcon } from './icons';
+import { CheckIcon } from './icons';
 import AddWords from './AddWords';
 
 interface DailyWordListProps {
@@ -11,16 +11,6 @@ interface DailyWordListProps {
 const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
   const { progress, level, goToNextDay, wordList } = useProgressContext();
   const levelProgress = progress.progressByLevel[level];
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const playAudio = (audioFile: string) => {
-    if (audioRef.current) {
-        // NOTE: Audio files are not provided. This assumes they exist in a /audio/ directory.
-        // In a real app, you would need to provide these files.
-      audioRef.current.src = `/audio/${audioFile}`;
-      audioRef.current.play().catch(e => console.error("Error playing audio:", e));
-    }
-  };
 
   if (!words || words.length === 0) {
     return <AddWords />;
@@ -34,11 +24,11 @@ const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
       <h2 className="text-2xl sm:text-3xl font-bold text-teal-800 mb-6">Day {day} Words</h2>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {words.map(word => (
-          <div key={word.id} className="bg-slate-50 border border-slate-200 rounded-lg p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 transition-shadow hover:shadow-md">
-            <div className="flex-grow">
-              <div className="flex items-center gap-3">
+          <div key={word.id} className="bg-slate-50 border border-slate-200 rounded-lg p-4 transition-shadow hover:shadow-md h-full">
+            <div>
+              <div className="flex items-center gap-3 flex-wrap">
                 <h3 className="text-xl font-bold text-slate-900">{word.maori}</h3>
                 <span className="text-slate-500 font-medium">/ {word.english}</span>
                 {levelProgress.wordsMastered.includes(word.id) && (
@@ -57,13 +47,6 @@ const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
                 </p>
               </div>
             </div>
-            <button
-              onClick={() => playAudio(word.audio_file)}
-              className="flex-shrink-0 bg-teal-600 text-white p-3 rounded-full hover:bg-teal-700 active:bg-teal-800 transition-colors shadow-sm"
-              aria-label={`Play pronunciation for ${word.maori}`}
-            >
-              <SoundIcon className="w-6 h-6" />
-            </button>
           </div>
         ))}
       </div>
@@ -77,7 +60,6 @@ const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
           </button>
         )}
       </div>
-      <audio ref={audioRef} className="hidden" />
     </div>
   );
 };
