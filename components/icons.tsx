@@ -22,6 +22,21 @@ export const XIcon: React.FC<IconProps> = ({ className }) => (
     </svg>
 );
 
+export const StreakIcon: React.FC<IconProps> = ({ className }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+);
+
 export const SparklesIcon: React.FC<IconProps> = ({ className }) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m1-15l2 2m8-2l-2 2m0 10l2 2m-8 2l-2-2" />

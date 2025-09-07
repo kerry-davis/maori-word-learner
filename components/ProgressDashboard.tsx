@@ -1,6 +1,6 @@
 import React from 'react';
 import { useProgressContext } from '../contexts/ProgressContext';
-import { CheckIcon, FireIcon } from './icons';
+import { CheckIcon, StreakIcon } from './icons';
 
 const ProgressDashboard: React.FC = () => {
   const { progress, resetProgress, level, wordList } = useProgressContext();
@@ -39,7 +39,7 @@ const ProgressDashboard: React.FC = () => {
         <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 text-center">
           <h3 className="text-lg font-semibold text-slate-700">Learning Streak</h3>
           <div className="flex justify-center items-center gap-2 my-2">
-            <FireIcon className="w-10 h-10 text-orange-500" />
+            <StreakIcon className="w-10 h-10 text-orange-500" />
             <p className="text-4xl font-bold text-orange-600">{progress.streak} <span className="text-2xl text-slate-500">days</span></p>
           </div>
            <p className="text-sm text-slate-500">Keep it up!</p>

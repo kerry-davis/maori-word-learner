@@ -2,7 +2,7 @@
 import React from 'react';
 import { useProgressContext } from '../contexts/ProgressContext';
 import { View } from '../App';
-import { FireIcon } from './icons';
+import { StreakIcon } from './icons';
 import type { Level } from '../types';
 
 interface HeaderProps {
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ currentView, setView }) => {
           <p className="text-sm text-slate-500">Kia kaha te reo Māori!</p>
         </div>
         <div className="flex items-center gap-2 bg-orange-100 text-orange-700 font-bold px-4 py-2 rounded-full shadow-inner">
-          <FireIcon className="w-6 h-6 text-orange-500" />
+          <StreakIcon className="w-6 h-6 text-orange-500" />
           <span>{progress.streak} Day Streak</span>
         </div>
       </div>
