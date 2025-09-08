@@ -2,7 +2,7 @@ import type { Word } from '../types/index';
 
 export const WORD_LIST: Word[] = [
   // Beginner - Day 1 (Kitchen / Kīhini)
-  { id: 1, day: 1, level: 'Beginner', maori: "Pākaukau", english: "Table, bench, counter", example_maori: "Kei runga te pereti i te pākaukau.", example_english: "The plate is on the table.", audio_file: "pakaukau.mp3" },
+  { id: 1, day: 1, level: 'Beginner', maori: "Tēpu", english: "Table, bench, counter", example_maori: "Kei runga te pereti i te tēpu.", example_english: "The plate is on the table.", audio_file: "tepu.mp3" },
   { id: 2, day: 1, level: 'Beginner', maori: "Nohoanga", english: "Chair, seat", example_maori: "Tēnā, haria mai he nohoanga.", example_english: "Please, bring a chair.", audio_file: "nohoanga.mp3" },
   { id: 3, day: 1, level: 'Beginner', maori: "Ipu", english: "Container, bowl, vessel", example_maori: "Kei roto i te ipu te huamata.", example_english: "The salad is in the bowl.", audio_file: "ipu.mp3" },
   { id: 4, day: 1, level: 'Beginner', maori: "Māripi", english: "Knife", example_maori: "Kia tūpato ki te māripi koi.", example_english: "Be careful with the sharp knife.", audio_file: "maripi.mp3" },
