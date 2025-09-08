@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useCallback } from 'react';
 import type { UserProgress, Level, LevelProgress, Word } from '../types/index';
 
@@ -150,6 +151,25 @@ export const useProgress = () => {
     });
   }, []);
 
+  const goToPreviousDay = useCallback((level: Level) => {
+    setProgress(prev => {
+      const levelProgress = prev.progressByLevel[level];
+      if (levelProgress.currentDay > 1) {
+        return {
+          ...prev,
+          progressByLevel: {
+            ...prev.progressByLevel,
+            [level]: {
+              ...levelProgress,
+              currentDay: levelProgress.currentDay - 1,
+            }
+          }
+        };
+      }
+      return prev;
+    });
+  }, []);
+
   const resetProgress = useCallback(() => {
       const freshProgress = {...defaultProgress, lastVisitDate: getTodayDateString(), streak: 1};
       setProgress(freshProgress);
@@ -157,5 +177,5 @@ export const useProgress = () => {
   }, []);
 
 
-  return { progress, markWordAsMastered, markDayAsCompleted, resetProgress, goToNextDay };
+  return { progress, markWordAsMastered, markDayAsCompleted, resetProgress, goToNextDay, goToPreviousDay };
 };

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import type { Word } from '../types/index';
 import { useProgressContext } from '../contexts/ProgressContext';
@@ -9,7 +10,7 @@ interface DailyWordListProps {
 }
 
 const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
-  const { progress, level, goToNextDay, wordList } = useProgressContext();
+  const { progress, level, goToNextDay, goToPreviousDay, wordList } = useProgressContext();
   const levelProgress = progress.progressByLevel[level];
 
   if (!words || words.length === 0) {
@@ -19,6 +20,7 @@ const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
   const wordsForLevel = wordList.filter(w => w.level === level);
   const maxDayForLevel = wordsForLevel.length > 0 ? Math.max(...wordsForLevel.map(w => w.day)) : 0;
   const isLastDay = levelProgress.currentDay >= maxDayForLevel;
+  const isFirstDay = levelProgress.currentDay <= 1;
   const day = words[0]?.day || levelProgress.currentDay;
 
   return (
@@ -50,7 +52,16 @@ const DailyWordList: React.FC<DailyWordListProps> = ({ words }) => {
           </div>
         ))}
       </div>
-      <div className="mt-8 flex justify-end">
+      <div className="mt-8 flex justify-between items-center">
+        {!isFirstDay ? (
+          <button
+            onClick={() => goToPreviousDay(level)}
+            className="bg-slate-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-slate-600 transition-colors shadow-md"
+          >
+            &larr; Previous Day
+          </button>
+        ) : <div />}
+
         {!isLastDay && (
           <button
             onClick={() => goToNextDay(level)}

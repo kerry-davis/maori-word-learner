@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useCallback } from 'react';
 import { ProgressProvider } from './contexts/ProgressContext';
 import Header from './components/Header';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
     resetProgress: progressHook.resetProgress,
     markDayAsCompleted: useCallback((day: number, l: Level) => progressHook.markDayAsCompleted(day, l, wordList), [progressHook.markDayAsCompleted, wordList]),
     goToNextDay: useCallback((l: Level) => progressHook.goToNextDay(l, wordList), [progressHook.goToNextDay, wordList]),
+    goToPreviousDay: progressHook.goToPreviousDay,
     level,
     setLevel,
     wordList,
