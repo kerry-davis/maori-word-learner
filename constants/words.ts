@@ -2,12 +2,12 @@ import type { Word } from '../types/index';
 
 export const WORD_LIST: Word[] = [
   // Beginner - Day 1 (Kitchen / Kīhini)
-  { id: 1, day: 1, level: 'Beginner', maori: "Pākaukau", english: "Table, bench, counter", example_maori: "Kei runga te pereti i te pākaukau.", example_english: "The plate is on the table.", audio_file: "pakaukau.mp3" },
+  { id: 1, day: 1, level: 'Beginner', maori: "Tēpu", english: "Table, bench, counter", example_maori: "Kei runga te pereti i te tēpu.", example_english: "The plate is on the table.", audio_file: "tepu.mp3" },
   { id: 2, day: 1, level: 'Beginner', maori: "Nohoanga", english: "Chair, seat", example_maori: "Tēnā, haria mai he nohoanga.", example_english: "Please, bring a chair.", audio_file: "nohoanga.mp3" },
-  { id: 3, day: 1, level: 'Beginner', maori: "Ipu", english: "Container, bowl, vessel", example_maori: "Kei roto i te ipu te huamata.", example_english: "The salad is in the bowl.", audio_file: "ipu.mp3" },
+  { id: 3, day: 1, level: 'Beginner', maori: "Ipu", english: "Cup, drinking vessel", example_maori: "Kei te hiahia koe ki tētahi ipu tī?", example_english: "Would you like a cup of tea?", audio_file: "ipu.mp3" },
   { id: 4, day: 1, level: 'Beginner', maori: "Māripi", english: "Knife", example_maori: "Kia tūpato ki te māripi koi.", example_english: "Be careful with the sharp knife.", audio_file: "maripi.mp3" },
-  { id: 5, day: 1, level: 'Beginner', maori: "Pūnu", english: "Spoon", example_maori: "Whakamahia te pūnu hei kai i te hupa.", example_english: "Use the spoon to eat the soup.", audio_file: "punu.mp3" },
-  { id: 6, day: 1, level: 'Beginner', maori: "Kapu", english: "Cup", example_maori: "Kei te hiahia koe ki tētahi kapu tī?", example_english: "Would you like a cup of tea?", audio_file: "kapu.mp3" },
+  { id: 5, day: 1, level: 'Beginner', maori: "Koko", english: "Spoon", example_maori: "Whakamahia te koko hei kai i te hupa.", example_english: "Use the spoon to eat the soup.", audio_file: "koko.mp3" },
+  { id: 6, day: 1, level: 'Beginner', maori: "Oko", english: "Bowl", example_maori: "Kei roto i te oko te huamata.", example_english: "The salad is in the bowl.", audio_file: "oko.mp3" },
   { id: 7, day: 1, level: 'Beginner', maori: "Kōhua", english: "Pot, boiler", example_maori: "Kei te koropupū te wai i roto i te kōhua.", example_english: "The water is boiling in the pot.", audio_file: "kohua.mp3" },
 
   // Beginner - Day 2 (Kitchen / Kīhini)
@@ -15,9 +15,9 @@ export const WORD_LIST: Word[] = [
   { id: 9, day: 2, level: 'Beginner', maori: "Pātaka", english: "Pantry, larder, food store", example_maori: "Tirohia i roto i te pātaka mō te paraoa.", example_english: "Look in the pantry for the flour.", audio_file: "pataka.mp3" },
   { id: 10, day: 2, level: 'Beginner', maori: "Tāora", english: "Towel, dishcloth", example_maori: "Horoia ngā rīhi ki te tāora.", example_english: "Dry the dishes with the towel.", audio_file: "taora.mp3" },
   { id: 11, day: 2, level: 'Beginner', maori: "Paraharaha", english: "Frying pan, skillet", example_maori: "Ka parai ahau i ngā hēki i roto i te paraharaha.", example_english: "I will fry the eggs in the pan.", audio_file: "paraharaha.mp3" },
-  { id: 12, day: 2, level: 'Beginner', maori: "Hopi", english: "Soap", example_maori: "Horoi o ringaringa ki te hopi.", example_english: "Wash your hands with soap.", audio_file: "hopi.mp3" },
-  { id: 13, day: 2, level: 'Beginner', maori: "Tāpu", english: "Sink, tub", example_maori: "Waiho ngā rīhi ki roto i te tāpu.", example_english: "Leave the dishes in the sink.", audio_file: "tapu_sink.mp3" },
-  { id: 14, day: 2, level: 'Beginner', maori: "Pereti", english: "Plate", example_maori: "Whakatakotoria ngā pereti ki runga i te tēpu.", example_english: "Place the plates on the table.", audio_file: "pereti.mp3" },
+  { id: 12, day: 2, level: 'Beginner', maori: "Uku", english: "Soap, clay", example_maori: "Horoi o ringaringa ki te uku.", example_english: "Wash your hands with soap.", audio_file: "uku.mp3" },
+  { id: 13, day: 2, level: 'Beginner', maori: "Kāraha", english: "Sink, tub", example_maori: "Waiho ngā rīhi ki roto i te kāraha.", example_english: "Leave the dishes in the sink.", audio_file: "karaha.mp3" },
+  { id: 14, day: 2, level: 'Beginner', maori: "Kōpae", english: "Plate", example_maori: "Whakatakotoria ngā kōpae ki runga i te tēpu.", example_english: "Place the plates on the table.", audio_file: "kopae.mp3" },
   
   // Beginner - Day 3 (Clothing / Kākahu)
   { id: 43, day: 3, level: 'Beginner', maori: "Pōtae", english: "Hat", example_maori: "Kei te mau pōtae ia nā te rā.", example_english: "He is wearing a hat because of the sun.", audio_file: "potae.mp3" },
@@ -79,7 +79,7 @@ export const WORD_LIST: Word[] = [
   { id: 24, day: 2, level: 'Intermediate', maori: "Urunga", english: "Pillow, cushion", example_maori: "He urunga ngohengohe tēnei.", example_english: "This is a soft pillow.", audio_file: "urunga.mp3" },
   { id: 25, day: 2, level: 'Intermediate', maori: "Kāpata", english: "Cupboard, wardrobe, cabinet", example_maori: "Kei roto i te kāpata ōku kākahu.", example_english: "My clothes are in the wardrobe.", audio_file: "kapata.mp3" },
   { id: 26, day: 2, level: 'Intermediate', maori: "Wharepaku", english: "Toilet, bathroom", example_maori: "Kei hea te wharepaku?", example_english: "Where is the bathroom?", audio_file: "wharepaku.mp3" },
-  { id: 27, day: 2, level: 'Intermediate', maori: "Paraihe", english: "Brush", example_maori: "Paraihetia ō makawe.", example_english: "Brush your hair.", audio_file: "paraihe.mp3" },
+  { id: 27, day: 2, level: 'Intermediate', maori: "Taitai", english: "Brush", example_maori: "Taitaia ō makawe.", example_english: "Brush your hair.", audio_file: "taitai.mp3" },
   { id: 28, day: 2, level: 'Intermediate', maori: "Heru", english: "Comb", example_maori: "Kei te rapu ahau i taku heru.", example_english: "I am looking for my comb.", audio_file: "heru.mp3" },
 
   // Intermediate - Day 3 (Feelings & Emotions / Ngā Kare ā-roto)
